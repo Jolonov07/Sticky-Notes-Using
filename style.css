@@ -1,0 +1,108 @@
+body {
+	background-color: #ffb385;
+	height: 100vh;
+	font-family: 'Kalam', cursive;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	background-color: transparent;
+	padding: 10px 15px;
+	margin: 20px;
+	color: #d1f5d3;
+	font-family: 'Kalam', cursive;
+	font-size: 16px;
+	border: 3px solid #d1f5d3;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.4s ease;
+}
+
+button:hover {
+	background-color: rgba(0, 255, 255, 0.2);
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+.sticky-container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.sticky-container .sticky {
+	position: relative;
+	height: 280px;
+	width: 233px;
+	display: inline block;
+	font-weight: 600;
+	border-radius: 10px;
+	border: none;
+	margin: 20px;
+	padding: 18px 10px 10px 10px;
+	box-sizing: border-box;
+	box-shadow: 6px 7px 12px -5px rgba(0, 0, 0, 0.75);
+	font-size: 32px;
+	background: #ffd31d;
+	resize: none;
+	animation: stickAnim 0.3a ease;
+}
+
+.sticky-containern .sticky::-webkit-scrollbar {
+	display: none;
+}
+
+.sticky-container .sticky:focus {
+	outline: none;
+}
+.sticky-container .close {
+	position: relative;
+	font-size: 22px;
+	font-weight: 600;
+	cursor: pointer;
+	z-index: 1;
+	top: 30px;
+	color: #444;
+	right: 55px;
+	cursor: pointer;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	border-radius: 50%;
+	transition: 0.5s;
+}
+
+.sticky-container .close:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sticky-container .sticky .close:active {
+	transform: scale(0.98);
+}
+
+@keyframes stickAnim {
+	0% {
+		transform: scale(5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
